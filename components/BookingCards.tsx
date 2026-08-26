@@ -35,7 +35,6 @@ export default function BookingCards() {
           </a>
         </p>
         <p className="loc-service">Muskelterapi / massasje</p>
-        {BOOKING.liertoppen.note && <p className="loc-note">{BOOKING.liertoppen.note}</p>}
         <a href={BOOKING.liertoppen.internalHref} className="btn btn-blue">
           {BOOKING.liertoppen.ctaLabel}
         </a>
