@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { BOOKING } from "@/lib/constants";
+import BookingCards from "@/components/BookingCards";
 
 export const metadata: Metadata = {
   title: "Bestill time",
@@ -36,27 +36,7 @@ export default function BestillPage() {
 
       <section className="section">
         <div className="wrap">
-          <div className="book-grid">
-            <div className="loc-card brown">
-              <span className="mono brown-text">Sandvika</span>
-              <h3>{BOOKING.sandvika.clinic}</h3>
-              <p>Muskelterapi og massasje</p>
-              <a href={BOOKING.sandvika.internalHref} className="btn btn-brown">
-                {BOOKING.sandvika.ctaLabel}
-              </a>
-              <a href={BOOKING.sandvika.profileUrl} className="secondary-link">
-                Se profilen min hos Limbra →
-              </a>
-            </div>
-            <div className="loc-card blue">
-              <span className="mono blue-text">Liertoppen</span>
-              <h3>{BOOKING.liertoppen.clinic}</h3>
-              <p>Muskelterapi og massasje</p>
-              <a href={BOOKING.liertoppen.internalHref} className="btn btn-blue">
-                {BOOKING.liertoppen.ctaLabel}
-              </a>
-            </div>
-          </div>
+          <BookingCards />
         </div>
       </section>
     </>

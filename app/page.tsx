@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BOOKING, SITE_URL } from "@/lib/constants";
 import { articles } from "@/content/articles";
+import BookingCards from "@/components/BookingCards";
 
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -209,27 +210,7 @@ export default function HomePage() {
             <span className="mono">Bestill behandling</span>
             <h2>Hvor ønsker du behandling?</h2>
           </div>
-          <div className="book-grid">
-            <div className="loc-card brown">
-              <span className="mono brown-text">Sandvika</span>
-              <h3>{BOOKING.sandvika.clinic}</h3>
-              <p>Muskelterapi / massasje</p>
-              <Link href={BOOKING.sandvika.internalHref} className="btn btn-brown">
-                {BOOKING.sandvika.ctaLabel}
-              </Link>
-              <a href={BOOKING.sandvika.profileUrl} className="secondary-link">
-                Se profilen min hos Limbra →
-              </a>
-            </div>
-            <div className="loc-card blue">
-              <span className="mono blue-text">Liertoppen</span>
-              <h3>{BOOKING.liertoppen.clinic}</h3>
-              <p>Muskelterapi / massasje</p>
-              <Link href={BOOKING.liertoppen.internalHref} className="btn btn-blue">
-                {BOOKING.liertoppen.ctaLabel}
-              </Link>
-            </div>
-          </div>
+          <BookingCards />
         </div>
       </section>
 

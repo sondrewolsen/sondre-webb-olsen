@@ -153,9 +153,19 @@ section.section { padding: 64px 0; }
 .loc-card .mono.brown-text { color: #6E5342; }
 .loc-card .mono.blue-text { color: #6E93A6; }
 .loc-card h3 { font-size: 20px; margin-bottom: 4px; }
-.loc-card p { font-size: 13px; color: #5B534B; margin-bottom: 20px; }
-.loc-card .secondary-link { display: block; margin-top: 12px; font-family: var(--font-mono); font-size: 11px; color: #5B534B; text-decoration: underline; }
+.loc-card p { font-size: 13px; color: #5B534B; }
+.loc-card .loc-address { margin-bottom: 2px; }
+.loc-card .loc-address a { color: #201C18; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: #C7BEB4; }
+.loc-card .loc-service { margin-bottom: 14px; }
+.loc-card .loc-note { font-size: 11.5px; color: #8A7F73; margin-bottom: 14px; margin-top: -8px; }
+.loc-card .btn { margin-top: 4px; }
+.loc-card .loc-links { display: flex; flex-direction: column; gap: 4px; margin-top: 12px; }
+.loc-card .secondary-link { display: block; font-family: var(--font-mono); font-size: 11px; color: #5B534B; text-decoration: underline; }
 @media (max-width: 768px) { .book-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .loc-card { padding: 20px; }
+  .loc-card .loc-note { margin-bottom: 14px; }
+}
 
 /* ABOUT PREVIEW / PHOTO BLOCKS */
 .about-preview { display: grid; grid-template-columns: 220px 1fr; gap: 36px; align-items: center; }
