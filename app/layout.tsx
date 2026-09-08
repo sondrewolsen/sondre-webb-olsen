@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -51,6 +52,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <MobileSticky />
+        <Analytics />
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ export const BOOKING = {
     clinic: "Limbra Sandvika",
     address: "Rådmann Halmrasts vei 4, 1337 Sandvika",
     note: "Kort gangavstand fra Sandvika stasjon",
+    days: "tirsdag og torsdag",
     ctaLabel: "Bestill time i Sandvika",
     internalHref: "/bestill/sandvika",
     destinationUrl:
@@ -18,6 +19,7 @@ export const BOOKING = {
     label: "Liertoppen",
     clinic: "Styrk Helse Kiropraktorsenter",
     address: "Vestre Kjennervei 2, 3420 Lierskogen",
+    days: "mandag, onsdag og fredag",
     ctaLabel: "Bestill time på Liertoppen",
     internalHref: "/bestill/liertoppen",
     destinationUrl: "https://timebestilling.aspit.no/#/p2179/services/10/appointment",

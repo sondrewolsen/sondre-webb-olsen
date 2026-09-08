@@ -13,6 +13,7 @@ export default function BookingCards() {
         </p>
         <p className="loc-service">Muskelterapi / massasje</p>
         {BOOKING.sandvika.note && <p className="loc-note">{BOOKING.sandvika.note}</p>}
+        <p className="loc-days">Vanlige behandlingsdager: {BOOKING.sandvika.days}</p>
         <a href={BOOKING.sandvika.internalHref} className="btn btn-brown">
           {BOOKING.sandvika.ctaLabel}
         </a>
@@ -35,6 +36,7 @@ export default function BookingCards() {
           </a>
         </p>
         <p className="loc-service">Muskelterapi / massasje</p>
+        <p className="loc-days">Vanlige behandlingsdager: {BOOKING.liertoppen.days}</p>
         <a href={BOOKING.liertoppen.internalHref} className="btn btn-blue">
           {BOOKING.liertoppen.ctaLabel}
         </a>
