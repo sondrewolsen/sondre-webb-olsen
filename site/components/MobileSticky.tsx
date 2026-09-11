@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { BOOKING } from "@/lib/constants";
+import BookingLink from "@/components/BookingLink";
 
 // Hidden on /bestill since that page already shows both options inline —
 // a floating duplicate there would be redundant.
@@ -28,13 +28,24 @@ export default function MobileSticky() {
 
   return (
     <div className="mobile-sticky">
-      <Link href={BOOKING.sandvika.internalHref} className="btn btn-brown">
+      <BookingLink
+        location="sandvika"
+        href={BOOKING.sandvika.internalHref}
+        placement="mobile_sticky"
+        className="btn btn-brown"
+      >
         Sandvika
-      </Link>
-      <Link href={BOOKING.liertoppen.internalHref} className="btn btn-blue">
+      </BookingLink>
+      <BookingLink
+        location="liertoppen"
+        href={BOOKING.liertoppen.internalHref}
+        placement="mobile_sticky"
+        className="btn btn-blue"
+      >
         Liertoppen
-      </Link>
+      </BookingLink>
     </div>
   );
 }
+
 

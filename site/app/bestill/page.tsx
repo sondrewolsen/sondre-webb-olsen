@@ -36,7 +36,7 @@ export default function BestillPage() {
 
       <section className="section">
         <div className="wrap">
-          <BookingCards />
+          <BookingCards placement="bestill_page" />
         </div>
       </section>
     </>

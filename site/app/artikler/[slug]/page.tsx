@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { articles } from "@/content/articles";
 import { BOOKING, SITE_URL } from "@/lib/constants";
+import BookingLink from "@/components/BookingLink";
 
 interface Props {
   params: { slug: string };
@@ -83,12 +84,24 @@ export default function ArticlePage({ params }: Props) {
           <div className="cta-inline">
             <p>Vil du snakke om dette med noen?</p>
             <div className="cta-row">
-              <a href={BOOKING.sandvika.internalHref} className="btn btn-brown">
+              <BookingLink
+                location="sandvika"
+                href={BOOKING.sandvika.internalHref}
+                placement="article_page"
+                extraParams={{ article: article.slug }}
+                className="btn btn-brown"
+              >
                 Sandvika
-              </a>
-              <a href={BOOKING.liertoppen.internalHref} className="btn btn-blue">
+              </BookingLink>
+              <BookingLink
+                location="liertoppen"
+                href={BOOKING.liertoppen.internalHref}
+                placement="article_page"
+                extraParams={{ article: article.slug }}
+                className="btn btn-blue"
+              >
                 Liertoppen
-              </a>
+              </BookingLink>
             </div>
           </div>
 

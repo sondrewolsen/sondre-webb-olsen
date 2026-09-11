@@ -1,6 +1,11 @@
 import { BOOKING } from "@/lib/constants";
+import BookingLink from "@/components/BookingLink";
 
-export default function BookingCards() {
+interface BookingCardsProps {
+  placement?: string;
+}
+
+export default function BookingCards({ placement = "booking_section" }: BookingCardsProps) {
   return (
     <div className="book-grid">
       <div className="loc-card brown">
@@ -14,9 +19,14 @@ export default function BookingCards() {
         <p className="loc-service">Muskelterapi / massasje</p>
         {BOOKING.sandvika.note && <p className="loc-note">{BOOKING.sandvika.note}</p>}
         <p className="loc-days">Vanlige behandlingsdager: {BOOKING.sandvika.days}</p>
-        <a href={BOOKING.sandvika.internalHref} className="btn btn-brown">
+        <BookingLink
+          location="sandvika"
+          href={BOOKING.sandvika.internalHref}
+          placement={placement}
+          className="btn btn-brown"
+        >
           {BOOKING.sandvika.ctaLabel}
-        </a>
+        </BookingLink>
         <div className="loc-links">
           <a href={BOOKING.sandvika.mapsUrl} target="_blank" rel="noreferrer" className="secondary-link">
             Se i kart →
@@ -37,9 +47,14 @@ export default function BookingCards() {
         </p>
         <p className="loc-service">Muskelterapi / massasje</p>
         <p className="loc-days">Vanlige behandlingsdager: {BOOKING.liertoppen.days}</p>
-        <a href={BOOKING.liertoppen.internalHref} className="btn btn-blue">
+        <BookingLink
+          location="liertoppen"
+          href={BOOKING.liertoppen.internalHref}
+          placement={placement}
+          className="btn btn-blue"
+        >
           {BOOKING.liertoppen.ctaLabel}
-        </a>
+        </BookingLink>
         <div className="loc-links">
           <a href={BOOKING.liertoppen.mapsUrl} target="_blank" rel="noreferrer" className="secondary-link">
             Se i kart →

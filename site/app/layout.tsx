@@ -5,6 +5,8 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import MobileSticky from "@/components/MobileSticky";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieConsent from "@/components/CookieConsent";
 import { SITE_URL } from "@/lib/constants";
 
 const spaceGrotesk = Space_Grotesk({
@@ -48,6 +50,8 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} ${plexMono.variable}`}
       >
+        <GoogleAnalytics />
+        <CookieConsent />
         <Nav />
         {children}
         <Footer />

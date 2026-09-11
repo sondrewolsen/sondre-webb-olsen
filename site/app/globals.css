@@ -226,3 +226,16 @@ footer.site-footer { border-top: 1px solid #E2DCD3; padding: 48px 0 100px; }
   .hero h1 { font-size: 30px; }
   .page-hero h1 { font-size: 26px; }
 }
+
+/* COOKIE CONSENT BANNER */
+.cookie-banner { background: #201C18; }
+.cookie-banner-inner { max-width: 1120px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.cookie-banner-inner p { font-size: 12.5px; line-height: 1.5; color: #D9D0C4; margin: 0; max-width: 640px; }
+.cookie-banner-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-banner-actions .btn { padding: 9px 16px; font-size: 13px; }
+.cookie-banner-actions .btn-outline { border-color: #5B534B; color: #F7F4EF; }
+@media (max-width: 700px) {
+  .cookie-banner-inner { padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .cookie-banner-actions { width: 100%; }
+  .cookie-banner-actions .btn { flex: 1; justify-content: center; }
+}

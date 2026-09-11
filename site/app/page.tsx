@@ -3,6 +3,7 @@ import Image from "next/image";
 import { BOOKING, SITE_URL } from "@/lib/constants";
 import { articles } from "@/content/articles";
 import BookingCards from "@/components/BookingCards";
+import BookingLink from "@/components/BookingLink";
 
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -37,12 +38,22 @@ export default function HomePage() {
               behandling og flere års erfaring innen trening og coaching.
             </p>
             <div className="cta-row">
-              <Link href={BOOKING.sandvika.internalHref} className="btn btn-brown">
+              <BookingLink
+                location="sandvika"
+                href={BOOKING.sandvika.internalHref}
+                placement="hero"
+                className="btn btn-brown"
+              >
                 {BOOKING.sandvika.ctaLabel} <small>Limbra</small>
-              </Link>
-              <Link href={BOOKING.liertoppen.internalHref} className="btn btn-blue">
+              </BookingLink>
+              <BookingLink
+                location="liertoppen"
+                href={BOOKING.liertoppen.internalHref}
+                placement="hero"
+                className="btn btn-blue"
+              >
                 {BOOKING.liertoppen.ctaLabel} <small>Styrk Helse</small>
-              </Link>
+              </BookingLink>
             </div>
             <Link href="/behandling" className="hero-more-link">
               Se hva du kan forvente →

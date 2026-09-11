@@ -115,7 +115,7 @@ export default function OmMegPage() {
             <span className="mono">Hvor finner du meg?</span>
             <h2>Behandling og trening</h2>
           </div>
-          <BookingCards />
+          <BookingCards placement="om_meg_page" />
           <p style={{ marginTop: 20, fontSize: 13.5, color: "#5B534B" }}>
             Jeg coacher også functional fitness og HYROX-trening hos{" "}
             <strong>Oslo Training Club</strong>.

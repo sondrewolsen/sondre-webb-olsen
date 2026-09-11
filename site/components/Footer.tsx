@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BOOKING } from "@/lib/constants";
+import BookingLink from "@/components/BookingLink";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -13,10 +14,20 @@ export default function Footer() {
           </div>
           <div>
             <h4>Behandling</h4>
-            <Link href={BOOKING.sandvika.internalHref}>Sandvika – Limbra</Link>
-            <Link href={BOOKING.liertoppen.internalHref}>
+            <BookingLink
+              location="sandvika"
+              href={BOOKING.sandvika.internalHref}
+              placement="footer"
+            >
+              Sandvika – Limbra
+            </BookingLink>
+            <BookingLink
+              location="liertoppen"
+              href={BOOKING.liertoppen.internalHref}
+              placement="footer"
+            >
               Liertoppen – Styrk Helse
-            </Link>
+            </BookingLink>
           </div>
           <div>
             <h4>Nettside</h4>

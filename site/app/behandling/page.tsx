@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { BOOKING } from "@/lib/constants";
+import BookingLink from "@/components/BookingLink";
 
 export const metadata: Metadata = {
   title: "Behandling",
@@ -121,12 +122,22 @@ export default function BehandlingPage() {
           <div className="cta-inline">
             <p>Klar for å bestille time?</p>
             <div className="cta-row">
-              <a href={BOOKING.sandvika.internalHref} className="btn btn-brown">
+              <BookingLink
+                location="sandvika"
+                href={BOOKING.sandvika.internalHref}
+                placement="behandling_page"
+                className="btn btn-brown"
+              >
                 Sandvika
-              </a>
-              <a href={BOOKING.liertoppen.internalHref} className="btn btn-blue">
+              </BookingLink>
+              <BookingLink
+                location="liertoppen"
+                href={BOOKING.liertoppen.internalHref}
+                placement="behandling_page"
+                className="btn btn-blue"
+              >
                 Liertoppen
-              </a>
+              </BookingLink>
             </div>
           </div>
         </div>
